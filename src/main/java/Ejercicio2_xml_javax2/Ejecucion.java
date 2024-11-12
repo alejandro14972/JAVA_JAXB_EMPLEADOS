@@ -16,7 +16,12 @@ public class Ejecucion {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		crearArchivoSerializar();
+		leerArchivoDeserializarXML();
+	}
 
+	private static void crearArchivoSerializar() {
+		// TODO Auto-generated method stub
 		Empleado e1 = new Empleado("Alejandro", 001, "Programador", 1500);
 		Empleado e2 = new Empleado("Juan", 002, "Análista", 2300);
 
@@ -50,15 +55,13 @@ public class Ejecucion {
 			JAXBContext context = JAXBContext.newInstance(Empresa.class);
 			Marshaller m = context.createMarshaller();
 
-			//m.marshal(miEmpresa, System.out);
+			m.marshal(miEmpresa, System.out);
 			m.marshal(miEmpresa, new File("MI_EMPRESA_3_JAXB.xml"));
 
 		} catch (JAXBException e) {
 			e.printStackTrace();
 		}
 		
-		leerArchivoDeserializarXML();
-
 	}
 
 	private static void leerArchivoDeserializarXML() {

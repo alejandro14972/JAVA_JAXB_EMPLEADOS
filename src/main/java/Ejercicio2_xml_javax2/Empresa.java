@@ -27,11 +27,9 @@ public class Empresa {
 		return departamentos;
 	}
 
-
 	public void setDepartamentos(ArrayList<Departamento> departamentos) {
 		this.departamentos = departamentos;
 	}
-
 
 	@Override
 	public String toString() {

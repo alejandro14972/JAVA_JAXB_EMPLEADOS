@@ -1,6 +1,8 @@
 package Ejercicio2_xml_javax2;
 
 import java.util.ArrayList;
+
+import jakarta.xml.bind.annotation.XmlAttribute;
 import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlElementWrapper;
 import jakarta.xml.bind.annotation.XmlRootElement;
@@ -29,7 +31,7 @@ public class Departamento {
 	public void setListaEmpleados(ArrayList<Empleado> listaEmpleados) {
 		this.listaEmpleados = listaEmpleados;
 	}
-	
+	@XmlAttribute
 	public String getNombre() {
 		return nombre;
 	}
